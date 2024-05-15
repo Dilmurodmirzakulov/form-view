@@ -1,0 +1,424 @@
+body {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-brand.demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.app-brand {
+  background-color: #fff;
+  padding-left: 15px;
+}
+
+.btn-primary {
+  background-color: #4dace1;
+  color: #fff;
+}
+
+/* The checkbox container */
+.wu-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  font-size: 1rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 25px;
+}
+
+/* Hide the browser's default checkbox */
+.wu-checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 0.375rem;
+}
+
+/* On mouse-over, add a grey background color */
+/* .wu-checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+} */
+
+.wu-checkbox-container .checkmark {
+  background-color: #c4c4c4;
+}
+
+/* When the checkbox is checked, add a blue background */
+.wu-checkbox-container input:checked ~ .checkmark {
+  background-color: #4dace1;
+}
+
+.wu-checkbox-container input:checked ~ .checkmark.dissmissed {
+  background-color: #ffab00;
+}
+
+.wu-checkbox-container input:checked ~ .checkmark.rejected {
+  background-color: #ff3e1d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.wu-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.wu-checkbox-container .checkmark:after {
+  left: 9px;
+  top: 7px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-nav {
+  background: #fff;
+  border-top: 1px solid #c4c4c4;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1040;
+  bottom: 0;
+}
+
+.mobile-nav .nav {
+  width: 100%;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.mobile-nav .nav-link {
+  color: #566a7f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  padding: 0.75rem;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.mobile-nav .nav-link img {
+  height: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-nav .nav-link span.menu-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mobile-nav .nav-link .badge-cart {
+  top: 0.7rem;
+  right: 1.3rem;
+}
+
+.authentication-wrapper.authentication-basic .authentication-inner {
+  max-width: 400px;
+  position: relative;
+}
+
+.authentication-wrapper .authentication-inner {
+  width: 100%;
+}
+
+.authentication-wrapper.authentication-basic {
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.authentication-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.wu-templates-section {
+  background-color: rgb(241, 243, 244);
+}
+
+.wu-section {
+  padding: 5rem 0rem;
+}
+
+.wu-template-card {
+  border: 1px solid rgb(218, 220, 224);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  overflow: hidden;
+}
+
+.wu-img-square {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.wu-img-square a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wu-img-square img {
+  height: 100%;
+}
+
+.wu-template-card.wu-img-square i {
+  font-size: 2.5rem;
+}
+
+.wu-img-square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.wu-img-square img {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.wu-img-square:hover img {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.wu-template-card:hover {
+  border-color: #4dace1;
+}
+
+.wu-template-card.wu-img-square i {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.wu-template-card.wu-img-square:hover i {
+  color: #4dace1;
+}
+.wu-card-info {
+  border-top: 1px solid rgb(218, 220, 224);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+}
+
+.wu-card-info .dropdown-toggle,
+.wu-more-toggle {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  color: #566a7f;
+  border: 0;
+  box-shadow: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.wu-card-info .dropdown-toggle::after,
+.wu-more-toggle::after {
+  content: none;
+}
+
+.wu-card-info .dropdown-toggle:hover,
+.wu-more-toggle:hover {
+  background-color: rgb(218, 220, 224);
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+}
+.wu-card-info .dropdown-toggle:hover i,
+.wu-more-toggle:hover i {
+  color: #566a7f;
+}
+
+.wu-light-text {
+  color: rgb(128, 134, 139);
+}
+
+.wu-small-text {
+  font-size: 12px;
+}
+
+.wu-pr-color {
+  color: #4dace1;
+}
+
+.wu-main-search {
+  margin: 2rem 0;
+}
+
+.wu-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #202124;
+  text-decoration: none;
+  transition: 0.3s all;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -ms-transition: 0.3s all;
+  -o-transition: 0.3s all;
+}
+
+.wu-card-title:hover {
+  color: #4dace1;
+}
+
+.wu-form-name {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.wu-nav-brand {
+  margin-right: 10px;
+}
+
+.wu-nav-brand i {
+  font-size: 2rem;
+}
+
+.wu-create-nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.wu-tabs-nav {
+  background-color: #fff;
+  justify-content: center;
+}
+
+.wu-tabs-nav .nav-tabs {
+  justify-content: center;
+}
+
+.wu-tabs-nav .nav-link {
+  background-color: transparent !important;
+}
+
+.wu-tabs-nav .nav-tabs .nav-item .nav-link.active {
+  box-shadow: none !important;
+  border-bottom: 2px solid #4dace1 !important;
+  color: #4dace1;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.wu-input-text {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: transparent;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.wu-input-text:focus {
+  border-color: #4dace1;
+  box-shadow: none;
+}
+
+.wu-form-title {
+  font-size: 2rem;
+}
+
+.wu-form-item {
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  width: 80%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.wu-form-item:focus {
+  border-color: #4dace1;
+  box-shadow: none;
+}
