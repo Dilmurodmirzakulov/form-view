@@ -10,7 +10,16 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
-  
+  $(".form-title").click(function () {
+    $(this).addClass("active");
+  });
+
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".form-title").length) {
+      $(".form-title").removeClass("active");
+    }
+  });
+
   $(".editor").each(function () {
     const placeholder = $(this).data("placeholder");
 

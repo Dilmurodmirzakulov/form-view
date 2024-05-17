@@ -351,8 +351,22 @@ button {
 }
 
 .wu-form-name {
-  font-size: 1.25rem;
   margin-bottom: 0;
+  border-width: 0 0 1px 0;
+  padding: 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.wu-form-header-name {
+  font-size: 1.25rem;
+}
+
+.wu-form-name:focus {
+  box-shadow: none;
 }
 
 .wu-nav-brand {
@@ -432,7 +446,9 @@ button {
   box-shadow: none;
 }
 
-.form-card {
+.form-card,
+.form-title {
+  border-left: 3px solid #fff;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -444,18 +460,21 @@ button {
   border-left: 3px solid #4dace1;
 }
 
-.form-card .hide-form-active {
+.form-card .hide-form-active,
+.form-title .hide-form-active {
   display: block;
 }
 
-.form-card.active .hide-form-active {
+.form-card.active .hide-form-active,
+.form-title.active .hide-form-active {
   display: none;
 }
 
 .active-form-element {
   display: none; /* Initially hide the active form element */
 }
-.form-card.active .active-form-element {
+.form-card.active .active-form-element,
+.form-title.active .active-form-element {
   display: block; /* Display the active form element if its parent form card has the active class */
 }
 
@@ -526,7 +545,7 @@ button {
 }
 
 .wu-add-new {
-  padding: 3px .5rem;
+  padding: 3px 0.5rem;
   border: none;
   border-bottom: 1px solid transparent;
   border-radius: 0;
@@ -545,5 +564,5 @@ button {
   height: 18px;
   min-width: 18px;
   border: 1px solid rgb(217, 222, 227);
-  border-radius: .25em;
+  border-radius: 0.25em;
 }

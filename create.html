@@ -31,39 +31,38 @@
       <div class="container">
         <div class="d-flex">
           <div class="d-flex align-items-center">
-            <a href="#" class="wu-nav-brand">
-              <i class="fa-regular fa-file-lines"></i>
-            </a>
-            <h1 class="wu-form-name" id="page">Untitled form</h1>
-            <input
-              type="text"
-              value="Untitled form"
-              class="form-control wu-input-text wu-form-name"
-            />
-            <input
-              type="text"
-              value="Untitled form"
-              class="form-control wu-input-text wu-form-name"
-            />
-            <button class="btn btn-icon">
+            <div class="d-flex align-items-center form-title">
+              <a href="#" class="wu-nav-brand">
+                <i class="fa-regular fa-file-lines"></i>
+              </a>
+              <h1 class="wu-form-name wu-form-header-name hide-form-active" id="page">
+                Untitled form
+              </h1>
+              <input
+                type="text"
+                value="Untitled form"
+                class="form-control wu-form-name active-form-element wu-form-header-name"
+              />
+            </div>
+            <button class="btn wu-btn-icon">
               <i class="fa-regular fa-star"></i>
               <!-- <i class="fa-solid fa-star"></i> -->
             </button>
           </div>
           <div class="ms-auto d-flex align-items-center">
-            <a class="btn btn-icon" href="#">
+            <a class="btn wu-btn-icon" href="#">
               <i class="fa-regular fa-eye"></i>
             </a>
-            <button class="btn btn-icon">
+            <button class="btn wu-btn-icon">
               <i class="fa-solid fa-rotate-left"></i>
             </button>
-            <button class="btn btn-icon">
+            <button class="btn wu-btn-icon">
               <i class="fa-solid fa-rotate-right"></i>
             </button>
             <button class="btn btn-primary mx-3">Send</button>
             <div class="dropdown">
               <button
-                class="btn btn-secondary dropdown-toggle wu-more-toggle"
+                class="btn dropdown-toggle wu-btn-icon hide-arrow"
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -175,17 +174,19 @@
           aria-labelledby="nav-home-tab"
           tabindex="0"
         >
-          <div class="card mb-3">
+          <div class="card mb-3 form-card">
             <div class="card-body">
+              <h2 class="hide-form-active mb-3">Untitled Form</h2>
               <input
                 type="text"
                 value="Untitled Form"
-                class="form-control wu-input-text wu-form-title"
+                class="form-control wu-form-name active-form-element wu-form-title mb-3"
               />
+              <div class="hide-form-active">Form Description</div>
               <input
                 type="text"
                 value="Form Description"
-                class="form-control wu-input-text"
+                class="form-control wu-form-name active-form-element"
               />
             </div>
           </div>
